@@ -34,7 +34,7 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 ![](GitHubAssets/rotes.png)
 
 6. Instalar Typescript como depndência de desenvolvimento, pois o Node não entende essa linguagem: `npm i typescript -D`
-7. Criar script para converter TS para JS. No arquivo package: 
+7. Criar script para converter TS para JS. No arquivo package:
     "scripts": {
         "build": "tsc"
     }
@@ -61,7 +61,7 @@ Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
 ### React
 
 1. Criar pasta web;
-2. Começar projeto React com Vite: `npm create vite@latest`;
+2. Começar projeto React com Vite: `npm create vite@latest`. Ir preenchendo as informações;
 3. Com o projeto criado salvar as dependências `npm install`;
 4. Excluir da pasta src os seguintes arquivos:
     - pasta assets;
