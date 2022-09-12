@@ -6,6 +6,8 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 
 - Backend com Node;
 - Vizualização/testes das rotas criadas com [Hoppscotch](https://hoppscotch.io/pt-br/);
+- Typescript;
+- Vite para criar projeto React;
 
 ## Aprendizado
 
@@ -15,6 +17,9 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
     - [Insomnia](https://insomnia.rest/download);
     - [Postman](https://www.postman.com/);
     - [Hoppscotch](https://hoppscotch.io/pt-br/).
+
+- Iniciar aplicação React com [Vite](https://vitejs.dev/);
+- Iniciar aplicação React Native com [Expo](https://expo.dev/);
 
 ## Notas de aula
 
@@ -52,5 +57,24 @@ Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
     No tsconfig:
         "module": "commonJs"
     Rodar a aplicação para assistir as mudanças: `npm run dev`
+
+### React
+
+1. Criar pasta web;
+2. Começar projeto React com Vite: `npm create vite@latest`;
+3. Com o projeto criado salvar as dependências `npm install`;
+4. Excluir da pasta src os seguintes arquivos:
+    - pasta assets;
+    - todos os arquivos css;
+    - tirar do arquivo main as impotações do css;
+    - no arquivo App, remover todas as importações.
+5. `npm run dev` para abrir a aplicação no navegador.
+
+### React Native
+
+1. Iniciar o projeto React Native com Expo: `npx expo init mobile`, selecionar blank(Typescript)
+2. Abrir projeto no celular: `npx expo start`
+
+
     
  
