@@ -5,15 +5,16 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 ## Ferramentas utilizadas
 
 - Backend com Node;
+- Vizualização/testes das rotas criadas com [Hoppscotch](https://hoppscotch.io/pt-br/);
 
 ## Aprendizado
 
 - Criar banco de dados com Node;
 - Criar rotas com Express;
-- Ferramentas para visualizar as rotas criadas:
+- Ferramentas para visualizar/testar as rotas criadas:
     - [Insomnia](https://insomnia.rest/download);
     - [Postman](https://www.postman.com/);
-    - [hoppscotch](https://hoppscotch.io/pt-br/).
+    - [Hoppscotch](https://hoppscotch.io/pt-br/).
 
 ## Notas de aula
 
@@ -24,5 +25,32 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 3. Instalar dependência Express: `npm install express`;
 4. Importar express como módulo;
 5. Criar rota: 
+
 ![](GitHubAssets/rotes.png)
+
+6. Instalar Typescript como depndência de desenvolvimento, pois o Node não entende essa linguagem: `npm i typescript -D`
+7. Criar script para converter TS para JS. No arquivo package: 
+    "scripts": {
+        "build": "tsc"
+    }
+8. Criar arquivo de configuração do TS com `npx tsc --init`. Algumas configurações já estão feitas;
+9. No tsconfig mudar modules para ES2020;
+    Configurações:
+    "module": "ES2020",
+    "rootDir": "./src" --> diretório raiz da aplicação
+    "outDir": "./build" --> arquivos compilados estarão na pasta build
+    "moduleResolution": "node"
+Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
+10. Express não tem suporte ao TS, por isso tenho que instalar uma biblioteca adicional (ver documentação do express): `npm install @types/express -D`
+11. Fazer a aplicação atualizar sempre que mudar o código: `npm i ts-node-dev -D`
+    No arquivo package.json:
+        "scripts": {
+            "build": "tsc",
+            "dev": "tsnd src/server.ts" --> arquivo que quero rodar
+        }
+        apagar o type: module
+    No tsconfig:
+        "module": "commonJs"
+    Rodar a aplicação para assistir as mudanças: `npm run dev`
+    
  
