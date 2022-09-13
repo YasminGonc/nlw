@@ -9,6 +9,7 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 - Typescript;
 - Vite para criar projeto React;
 - Estilização com [Tailwind](https://tailwindcss.com/);
+- Biblioteca de íconer [Phosphor icons](https://phosphoricons.com/)
 
 ## Aprendizado
 
@@ -82,7 +83,8 @@ Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
     ]
     - criar pasta styles dentro de src. Criar arquivo main.css e copiar o que a biblioteca pede
 3. Rodar o comando `npx tailwindcss init -p`
-4. Importar o styles.css no arquivo App.
+4. Importar o styles.css no arquivo App;
+5. Instalar o phosphor icons com `npm i phosphor-react` (ver documentação);
 
 ### React Native
 
