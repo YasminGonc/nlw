@@ -8,6 +8,7 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 - Vizualização/testes das rotas criadas com [Hoppscotch](https://hoppscotch.io/pt-br/);
 - Typescript;
 - Vite para criar projeto React;
+- Estilização com [Tailwind](https://tailwindcss.com/);
 
 ## Aprendizado
 
@@ -60,6 +61,8 @@ Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
 
 ### React
 
+#### Preparação do ambiente - Aula 1
+
 1. Criar pasta web;
 2. Começar projeto React com Vite: `npm create vite@latest`. Ir preenchendo as informações;
 3. Com o projeto criado salvar as dependências `npm install`;
@@ -69,6 +72,17 @@ Obs.: sempre que mudar alguma configuração rodar novamente o `npm run build`
     - tirar do arquivo main as impotações do css;
     - no arquivo App, remover todas as importações.
 5. `npm run dev` para abrir a aplicação no navegador.
+
+#### Aula 2
+
+1. Instalar tailwind (ver documentação para instalar using PostCSS). Basicamente são 2 comandos: `npm install -D tailwindscss postcss autoprefixer` e `npx tailwindcss init`
+2. Fazer configurações que a biblioteca pede:
+    - content: [ --> mostrar quais arquivos vão usar o tailwind (todos os arquivos que estão dentro de src com o sufixo tsx)
+        './src/**/*.tsx',  
+    ]
+    - criar pasta styles dentro de src. Criar arquivo main.css e copiar o que a biblioteca pede
+3. Rodar o comando `npx tailwindcss init -p`
+4. Importar o styles.css no arquivo App.
 
 ### React Native
 
