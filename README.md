@@ -9,7 +9,8 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 - Typescript;
 - Vite para criar projeto React;
 - Estilização com [Tailwind](https://tailwindcss.com/);
-- Biblioteca de íconer [Phosphor icons](https://phosphoricons.com/)
+- Biblioteca de íconer [Phosphor icons](https://phosphoricons.com/);
+- Banco de dados SQLite.
 
 ## Aprendizado
 
@@ -22,6 +23,44 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 
 - Iniciar aplicação React com [Vite](https://vitejs.dev/);
 - Iniciar aplicação React Native com [Expo](https://expo.dev/);
+
+## Back-end
+
+### Entidades
+
+#### Games
+
+- id;
+- title;
+- bannerUrl.
+
+#### Ad
+
+- id;
+- gameId;
+- name;
+- yearsPlaying;
+- discord;
+- weekDays;
+- hourStart; (as horas serão salvas em minutos, já que é mais fácil de fazer a manipulação)
+- hourEnd;
+- useVoiceChannel;
+- createdAt.
+
+Obs.: tentar salvar sempre números inteiros no banco de dados
+<br>
+1:30h -> 90 min
+<br>
+R$ 179,89 -> 17989 (x100)
+<br>
+Datas (fuso horário/formatos)
+
+#### Games
+
+- listagem de games com contagem de anúncios;
+- criação de novo anúncio;
+- listagem de anúncios por game;
+- buscar discord pelo id do anúncio.
 
 ## Notas de aula
 
