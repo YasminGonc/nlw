@@ -10,7 +10,8 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 - Vite para criar projeto React;
 - Estilização com [Tailwind](https://tailwindcss.com/);
 - Biblioteca de íconer [Phosphor icons](https://phosphoricons.com/);
-- Banco de dados SQLite.
+- Banco de dados SQLite;
+- Biblioteca de componentes Ui [Radix](https://www.radix-ui.com/);
 
 ## Aprendizado
 
