@@ -1,4 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
+import axios from 'axios';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as Checkbox from '@radix-ui/react-checkbox';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
@@ -7,15 +8,16 @@ import { Check, GameController } from 'phosphor-react';
 import { Input } from './Form/Input';
 import { Game } from '../App';
 
+
 export function CreateAdModal() {
   const [games, setGames] = useState<Game[]>([]);
   const [weekDays, setWeekDays] = useState<string[]>([]);
+  const [useVoiceChannel, setUseVoiceChannel] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3333/games')
-      .then(response => response.json())
-      .then(data =>
-        setGames(data))
+    axios('http://localhost:3333/games').then(response => {
+      setGames (response.data)
+    })
   }, []);
 
   function handleCreateAd(event: FormEvent) {
@@ -24,7 +26,6 @@ export function CreateAdModal() {
     const formData = new FormData(event.target as HTMLFormElement);
     const data = Object.fromEntries(formData);
 
-    console.log(data);
   }
 
   return (
@@ -60,12 +61,12 @@ export function CreateAdModal() {
           </div>
 
           <div className="grid grid-cols-2 gap-6">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-2">
               <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
               <Input name='yearsPlaying' id='yearsPlaying' placeholder='Tudo bem ser ZERO' />
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-2">
               <label htmlFor="discord">Qual seu discord?</label>
               <Input name='discord' id='discord' placeholder='Usuário#0000' />
             </div>
@@ -140,7 +141,18 @@ export function CreateAdModal() {
           </div>
 
           <label className="mt-2 flex items-center gap-2 text-sm">
-            <Checkbox.Root className="w-6 h-6 p-1 rounded bg-zinc-900">
+            <Checkbox.Root 
+              className="w-6 h-6 p-1 rounded bg-zinc-900"
+              checked={useVoiceChannel}
+              onCheckedChange={(checked) => {
+                if (checked == true) {
+                  setUseVoiceChannel(true);
+                }
+                else {
+                  setUseVoiceChannel(false);
+                }
+              }}
+            >
               <Checkbox.Indicator>
                 <Check className="w-4 h-4 text-emerald-400" />
               </Checkbox.Indicator>
