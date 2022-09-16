@@ -12,6 +12,7 @@ Proojeto desenvolvido no projeto NLW eSports da Rocketseat.
 - Biblioteca de íconer [Phosphor icons](https://phosphoricons.com/);
 - Banco de dados SQLite;
 - Biblioteca de componentes Ui [Radix](https://www.radix-ui.com/);
+- Axios API para requisições;
 
 ## Aprendizado
 
